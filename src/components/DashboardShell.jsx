@@ -1,0 +1,81 @@
+"use client";
+import { useState } from "react";
+import { useAuth } from "@/context/AuthContext";
+import { Menu, X, User } from "lucide-react";
+
+export default function DashboardShell({ title, tabs, activeTab, setActiveTab, children }) {
+  const { user, dbUser, role } = useAuth();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  return (
+    <div className="w-full min-h-[calc(100vh-4rem)] flex flex-col lg:flex-row bg-slate-950">
+      {/* Mobile Top Bar */}
+      <div className="lg:hidden flex items-center justify-between px-4 py-3 bg-slate-900 border-b border-slate-800">
+        <span className="font-bold text-white">{title}</span>
+        <button
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+          className="btn btn-sm btn-ghost text-slate-200"
+        >
+          {sidebarOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+        </button>
+      </div>
+
+      {/* Sidebar */}
+      <aside
+        className={`${
+          sidebarOpen ? "block" : "hidden"
+        } lg:block w-full lg:w-64 shrink-0 bg-slate-900 border-r border-slate-800 p-5`}
+      >
+        {/* User Profile Summary */}
+        <div className="flex items-center gap-3 pb-5 mb-5 border-b border-slate-800">
+          {dbUser?.photo || user?.image ? (
+            <img
+              src={dbUser?.photo || user?.image}
+              alt="Avatar"
+              className="w-11 h-11 rounded-full object-cover border border-amber-400"
+            />
+          ) : (
+            <div className="w-11 h-11 rounded-full bg-slate-800 flex items-center justify-center text-amber-400">
+              <User className="w-5 h-5" />
+            </div>
+          )}
+          <div className="min-w-0">
+            <p className="text-sm font-bold text-white truncate">{dbUser?.name || user?.name}</p>
+            <span className="text-xs text-amber-400 font-medium">{role} Panel</span>
+          </div>
+        </div>
+
+        {/* Navigation Tabs */}
+        <nav className="space-y-1.5">
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+            const isActive = activeTab === tab.id;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => {
+                  setActiveTab(tab.id);
+                  setSidebarOpen(false);
+                }}
+                className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition ${
+                  isActive
+                    ? "bg-amber-500 text-slate-950 font-semibold"
+                    : "text-slate-300 hover:bg-slate-800 hover:text-white"
+                }`}
+              >
+                <Icon className="w-4 h-4 shrink-0" />
+                {tab.label}
+              </button>
+            );
+          })}
+        </nav>
+      </aside>
+
+      {/* Main Content Area */}
+      <section className="flex-1 p-5 sm:p-8 overflow-x-auto">
+        <h1 className="text-2xl sm:text-3xl font-bold text-white mb-6">{title}</h1>
+        {children}
+      </section>
+    </div>
+  );
+}
