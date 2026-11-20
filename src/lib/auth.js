@@ -11,6 +11,11 @@ export const auth = betterAuth({
     enabled: true,
     requireEmailVerification: false, // Assignment rule: no email verification
   },
+  trustedOrigins: [
+    "http://localhost:3000",
+    process.env.BETTER_AUTH_URL,
+    process.env.NEXT_PUBLIC_BETTER_AUTH_URL,
+  ].filter(Boolean),
   socialProviders: {
     google: {
       clientId: process.env.GOOGLE_CLIENT_ID || "dummy",
