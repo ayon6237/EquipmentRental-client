@@ -51,7 +51,7 @@ export default function Navbar() {
             <Wrench className="w-5 h-5" />
           </span>
           <span>
-            Gear<span className="text-amber-400">Grid</span>
+            Equipment <span className="text-amber-400">Rental Platform</span>
           </span>
         </Link>
 

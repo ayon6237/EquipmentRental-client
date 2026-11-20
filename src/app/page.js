@@ -201,7 +201,7 @@ export default function HomePage() {
       <section className="bg-slate-900/60 border-y border-slate-800 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl font-bold text-white">Why Choose GearGrid?</h2>
+            <h2 className="text-3xl font-bold text-white">Why Choose Equipment Rental Platform?</h2>
             <p className="text-slate-400 mt-2">Built for reliability, transparency, and effortless equipment rentals.</p>
           </div>
 
