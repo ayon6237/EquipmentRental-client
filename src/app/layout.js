@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
 
 export const metadata = {
-  title: "GearGrid | Equipment Rental Platform",
+  title: "Equipment Rental Platform",
   description: "Browse, book, and rent verified equipment with secure online payments.",
 };
 
