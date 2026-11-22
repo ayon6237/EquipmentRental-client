@@ -75,7 +75,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-slate-800 py-5 text-center text-xs text-slate-500">
-        © {new Date().getFullYear()} GearGrid Equipment Rental Platform. All rights reserved.
+        © {new Date().getFullYear()} Equipment Rental Platform. All rights reserved.
       </div>
     </footer>
   );
