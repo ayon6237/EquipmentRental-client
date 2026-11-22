@@ -379,7 +379,7 @@ export default function HomePage() {
             {[
               { icon: BadgeDollarSign, title: "Affordable Pricing", desc: "Competitive daily, weekly, and monthly rates with zero hidden fees." },
               { icon: ShieldCheck, title: "Verified Owners", desc: "Every equipment listing is reviewed and approved by our admin team." },
-              { icon: Clock, title: "Flexible Periods", desc: "Rent for a single day or an entire month—book only what you need." },
+              { icon: Clock, title: "Flexible Periods", desc: "Rent for a single day or an entire month book only what you need." },
               { icon: CreditCard, title: "Secure Payments", desc: "Protected online checkout powered by Stripe with instant receipts." },
             ].map((feat) => {
               const Icon = feat.icon;
