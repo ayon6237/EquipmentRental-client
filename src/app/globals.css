@@ -6,3 +6,31 @@
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
+
+/* Tailwind v4 Light Mode (corporate theme) — Auto-updates ALL colors, gradients & opacities */
+html[data-theme="corporate"] {
+  color-scheme: light;
+  --color-slate-950: #f8fafc;
+  --color-slate-900: #ffffff;
+  --color-slate-800: #e2e8f0;
+  --color-slate-700: #cbd5e1;
+  --color-slate-600: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-400: #475569;
+  --color-slate-300: #334155;
+  --color-slate-200: #1e293b;
+  --color-slate-100: #0f172a;
+  --color-white: #0f172a;
+  --color-amber-400: #d97706;
+}
+
+/* Keep button text dark on yellow/amber buttons in Light Mode */
+html[data-theme="corporate"] .bg-amber-500,
+html[data-theme="corporate"] .bg-amber-400 {
+  color: #0f172a !important;
+}
+
+/* Subtle card shadows in Light Mode so white cards pop cleanly */
+html[data-theme="corporate"] .border-slate-800 {
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}

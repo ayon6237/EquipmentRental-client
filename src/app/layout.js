@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="night">
+    <html lang="en" data-theme="night" suppressHydrationWarning>
       <body className="min-h-screen flex flex-col bg-slate-950 text-slate-100 antialiased">
         <AuthProvider>
           <Navbar />
