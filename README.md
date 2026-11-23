@@ -1,6 +1,6 @@
-# GearGrid — Equipment Rental Platform
+Equipment Rental Platform
 
-**GearGrid** is a full-stack equipment rental marketplace connecting verified equipment owners with customers who need construction machinery, photography gear, vehicles, agricultural tools, electronics, and event equipment on demand. Built with Next.js (App Router), Express.js, MongoDB, BetterAuth, JWT, and Stripe Checkout, the platform provides role-based dashboards, real-time analytics, and an admin approval workflow.
+**Equipment Rental Platform** is a full-stack equipment rental marketplace connecting verified equipment owners with customers who need construction machinery, photography gear, vehicles, agricultural tools, electronics, and event equipment on demand. Built with Next.js (App Router), Express.js, MongoDB, BetterAuth, JWT, and Stripe Checkout, the platform provides role-based dashboards, real-time analytics, and an admin approval workflow.
 
 ---
 
@@ -10,22 +10,8 @@
 | :--- | :--- |
 | **Live Client Site** | [https://my-app-azure-gamma-33.vercel.app](https://my-app-azure-gamma-33.vercel.app) |
 | **Live Server API** | [https://equipment-rental-server-ten.vercel.app](https://equipment-rental-server-ten.vercel.app) |
-| **Client Repository** | `https://github.com/YOUR_USERNAME/YOUR_CLIENT_REPO` |
-| **Server Repository** | `https://github.com/YOUR_USERNAME/YOUR_SERVER_REPO` |
-
----
-
-## Demo Login Credentials
-
-Use the accounts below to test all three role-based dashboards:
-
-| Role | Email | Password |
-| :--- | :--- | :--- |
-| **Admin** | `admin@example.com` | `YourAdminPassword` |
-| **Owner** | `owner@example.com` | `YourOwnerPassword` |
-| **Customer** | `customer@example.com` | `YourCustomerPassword` |
-
-> **Note:** Stripe test payments work with standard test card details (`4242 4242 4242 4242`, any future expiry date, and any 3-digit CVC) or via the built-in Stripe Test Checkout flow.
+| **Client Repository** | `(https://github.com/ayon6237/EquipmentRental-client)` |
+| **Server Repository** | `(https://github.com/ayon6237/EquimentRental-server)` |
 
 ---
 
@@ -109,13 +95,13 @@ Use the accounts below to test all three role-based dashboards:
 ### 1. Clone Repositories
 ```bash
 # Clone Client
-git clone [https://github.com/YOUR_USERNAME/YOUR_CLIENT_REPO.git](https://github.com/YOUR_USERNAME/YOUR_CLIENT_REPO.git)
-cd YOUR_CLIENT_REPO
+git clone https://github.com/ayon6237/EquipmentRental-client
+cd https://github.com/ayon6237/EquipmentRental-client
 npm install
 
 # Clone Server
-git clone [https://github.com/YOUR_USERNAME/YOUR_SERVER_REPO.git](https://github.com/YOUR_USERNAME/YOUR_SERVER_REPO.git)
-cd YOUR_SERVER_REPO
+git clone https://github.com/ayon6237/EquimentRental-server
+cd https://github.com/ayon6237/EquimentRental-server
 npm install
 ```
 
