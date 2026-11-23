@@ -55,7 +55,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/ayon6237"
               target="_blank"
               rel="noreferrer"
               className="text-sm hover:text-amber-400"
@@ -63,7 +63,7 @@ export default function Footer() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/ayon-banerjee-ab672324b/"
               target="_blank"
               rel="noreferrer"
               className="text-sm hover:text-amber-400"
